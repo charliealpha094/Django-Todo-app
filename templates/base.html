@@ -1,0 +1,25 @@
+<!-- Done by Carlos Amaral (2020/11/23) -->
+
+{% load static %}
+<html>
+    <head>
+        <title>Todo App</title>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro
+        :ital,wght@1,900&display=swap" rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+          <div class="nav-left">
+            <h1><a href="{% url 'home' %}">Todo App</a></h1>
+          </div>
+          <div class="nav-right">
+              <a href="{% url 'todo_new' %}">+ New Todo Task</a>
+          </div>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
